@@ -1,0 +1,39 @@
+<template name="admin_pages_index">
+
+<div class="cl-mcont">
+
+  <div class="alert alert-info alert-white rounded">
+    <div class="icon"><i class="fa fa-info-circle"></i></div>
+    <strong>Pages</strong> being monitored are listed below! You can continue to see exactly what changes have been tracked so far.
+  </div>
+
+  <div class="alert alert-info alert-white rounded">
+    <div class="icon"><i class="fa fa-info-circle"></i></div>
+    <strong>Update all page data </strong> with just one click.   <a href="#" id="rescan_pages" class="btn btn-primary btn-xs">Crawl All Page Content</a>
+  </div>
+
+
+  	<div class="row">
+		<table class="table table-striped">
+	      <thead>
+	        <tr>
+	          <th>URL</th>
+	          <th>From Sitemap?</th>
+	          <th>Date Last Modified</th>
+	          <th>Active</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      	{{#each all_pages}}
+		        {{#with this}}
+	      	    {{> UI.dynamic template=admin_pages_item data=this}}
+	      	    {{/with}}
+	        {{/each}}
+	      </tbody>
+	    </table>
+
+  	</div>
+
+</div>
+
+</template>

@@ -1,0 +1,38 @@
+<template name="admin_pagereports_index">
+
+<div class="cl-mcont">	
+  <div class="alert alert-info alert-white rounded">
+    <div class="icon"><i class="fa fa-info-circle"></i></div>
+    <strong>Page Changes Reports</strong> gives you a detailed listing of all watched report data.
+  </div>
+
+
+  <div class="alert alert-info alert-white rounded">
+    <div class="icon"><i class="fa fa-info-circle"></i></div>
+    <strong>Update all page chages reports </strong> with just one click.   <a href="#" id="rescan_changes" class="btn btn-primary btn-xs">Scan for changes</a>
+  </div>
+
+  	<div class="row">
+		<table class="table table-striped">
+	      <thead>
+	        <tr>
+	          <th>URL</th>
+	          <th>Previous Date</th>
+	          <th>Last Modified</th>
+	          <th>Report Generated On</th>
+	          <th>Actions</th>
+	        </tr>
+	      </thead>
+	      <tbody>  	
+	      	{{#each all_pagereports}}
+		        {{#with this}}
+	      	    {{> UI.dynamic template=admin_pagereports_row data=this}}
+	      	    {{/with}}
+	        {{/each}}
+          </tbody>
+        </table>
+  	</div>
+
+</div>
+
+</template>

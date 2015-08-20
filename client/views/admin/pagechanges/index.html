@@ -1,0 +1,27 @@
+<template name="admin_pagechanges_index">
+
+<div class="cl-mcont">		
+  	<div class="row">
+		<table class="table table-striped">
+	      <thead>
+	        <tr>
+	          <th>URL</th>
+	          <th>From Sitemap?</th>
+	          <th>Date Last Modified</th>
+	          <th>Active</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      	{{#each all_pagechanges}}
+		        {{#with this}}
+	      	    {{> UI.dynamic template=admin_pagechanges_item data=this}}
+	      	    {{/with}}
+	        {{/each}}
+	      </tbody>
+	    </table>
+
+  	</div>
+
+</div>
+
+</template>

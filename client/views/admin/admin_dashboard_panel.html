@@ -1,0 +1,38 @@
+<template name="admin_dashboard_panel">
+
+<div class="cl-mcont">		
+  <div class="alert alert-info alert-white rounded">
+    <div class="icon"><i class="fa fa-info-circle"></i></div>
+    <strong>Welcome</strong> to the dashboard! Get started by adding a site to watch for changes.
+  </div>
+
+  	<div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="fd-tile detail clean tile-prusia">
+          <div class="content"><h1 class="text-left">{{sites_count}}</h1><p>Site{{site_plural}}</p></div>
+          <div class="icon"><i class="fa fa-globe"></i></div>
+          <a class="details" href="/admin/sites">See all the sites that are being monitored <span><i class="fa fa-arrow-circle-right pull-right"></i></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="fd-tile detail clean tile-purple">
+          <div class="content"><h1 class="text-left">{{pages_count}}</h1><p>Page{{pages_plural}}</p></div>
+          <div class="icon"><i class="fa fa-file"></i></div>
+          <a class="details" href="/admin/pages">See all the pages being monitored across all sites <span><i class="fa fa-arrow-circle-right pull-right"></i></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">    
+      <div class="col-md-12 col-sm-12">
+        <div class="fd-tile detail clean tile-red">
+          <div class="content"><h1 class="text-left">{{reports_count}}</h1><p>Change{{reports_plural}}</p></div>
+          <div class="icon"><i class="fa fa-edit"></i></div>
+          <a class="details" href="/admin/pagereports">See page change reports <span><i class="fa fa-arrow-circle-right pull-right"></i></span></a>
+        </div>
+      </div>
+    </div>
+</div>
+
+</template>

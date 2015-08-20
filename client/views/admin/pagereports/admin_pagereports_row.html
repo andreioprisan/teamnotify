@@ -1,0 +1,13 @@
+<template name="admin_pagereports_row">
+  <tr>
+  <td>{{this_url}}</td>
+  <td>{{from.date}}</td>
+  <td>{{to.date}}</td>
+  <td>{{date}}</td>
+  <td>
+    <a href="/admin/pages/reporton/{{pid}}" class="btn btn-success btn-xs">View Changes</a>
+    <a href="/admin/pages/site/{{sid}}" class="btn btn-success btn-xs">Back to Site Pages</a>
+  </td>
+  </tr>
+
+</template>

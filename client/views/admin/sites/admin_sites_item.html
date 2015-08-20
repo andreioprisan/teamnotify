@@ -1,0 +1,24 @@
+<template name="admin_sites_item">
+<tr>
+  <td>{{url}}</td>
+  <td>
+	{{#if sitemap}}
+		{{sitemap}}
+	{{else}}
+		No
+	{{/if}}
+  </td>  
+  <td>{{pages_count data=this}}</td>
+  <td>
+	{{#if active}}
+		Yes
+	{{else}}
+		No
+	{{/if}}
+  </td>
+  <td>
+  <a href="/admin/pages/site/{{_id}}" class="btn btn-success btn-xs">View Pages</a>
+  <!--<a href="/admin/sites/delete/{{_id}}" class="btn btn-danger btn-xs">Delete</a>-->
+  </td>
+</tr>
+</template>

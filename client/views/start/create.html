@@ -1,0 +1,36 @@
+<template name="accountCreate">
+	{{> home_nav}}	
+
+	<div class="cl-mcont">
+		<form role="form" id="account_creation">
+			<div class="fields">
+				<label for="name">Full name</label>
+	    		<input type="text" class="form-control" placeholder="Your full name" id="name">
+	  		</div>
+			<div class="fields">
+	    		<label for="name">Company name</label>
+	    		<input type="text" class="form-control" placeholder="Company name" id="company">
+	  		</div>
+	  		<div class="fields">
+	    		<label for="email">Email</label>
+	    		<input type="email" class="form-control" placeholder="Your email" id="email">
+	  		</div>
+	  		<div class="fields">
+	    		<label for="password">Password</label>
+	    		<input type="password" class="form-control" id="password">
+	  		</div>
+			<div class="actions">
+	  			<a href="#" class="btn btn-primary btn-lg" id="account-create">
+		  			<span>Sign Up</span>
+		  		</a>
+			</div>
+		</form>
+	</div>
+	<div class="cl-mcont">
+		<div class="message">
+			<span>Already have an account?</span>
+			<a href="/account/login">Login</a>
+		</div>
+	</div>
+
+</template>

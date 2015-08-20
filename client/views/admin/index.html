@@ -1,0 +1,17 @@
+<template name="adminHome">
+	<div id="cl-wrapper">
+  		<div class="cl-sidebar">
+			{{> admin_sidebar }}
+		</div>
+
+		<div class="container-fluid" id="pcont">
+
+        	{{> yield region='admin_main_header_right'}}
+
+	        {{> yield region='admin_dashboard_panel'}}
+			{{ admin_main_block }}
+
+		</div>
+	</div>
+
+</template>

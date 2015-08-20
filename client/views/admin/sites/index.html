@@ -1,0 +1,39 @@
+<template name="admin_sites_index">
+
+<div class="cl-mcont">		
+
+  <div class="alert alert-info alert-white rounded">
+    <div class="icon"><i class="fa fa-info-circle"></i></div>
+    <strong>Sites</strong> being monitored are listed below! You can continue to see exactly which pages are being monitored within those sites.
+  </div>
+
+  <div class="alert alert-info alert-white rounded">
+    <div class="icon"><i class="fa fa-info-circle"></i></div>
+    <strong>Update all sitemap data </strong> with just one click.   <a href="#" id="rescan_sitemaps" class="btn btn-primary btn-xs">Update Sitemap Content</a>
+  </div>
+
+  	<div class="row">
+		<table class="table table-striped">
+	      <thead>
+	        <tr>
+	          <th>URL</th>
+	          <th>Sitemap</th>
+	          <th>Pages Count</th>
+	          <th>Active</th>
+	          <th>Action</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      	{{#each all_sites}}
+		        {{#with this}}
+	      	    {{> UI.dynamic template=admin_sites_item data=this}}
+	      	    {{/with}}
+	        {{/each}}
+	      </tbody>
+	    </table>
+
+  	</div>
+
+</div>
+
+</template>

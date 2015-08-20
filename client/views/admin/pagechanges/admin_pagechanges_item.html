@@ -1,0 +1,17 @@
+<template name="admin_pagechanges_item">
+<tr>
+  <td>{{url}}</td>
+  <td>
+  {{#if from_sitemap}}
+    Yes
+  {{else}}
+    No
+  {{/if}}
+  </td>
+  <td>{{lastmod}}</td>
+  <td>
+  <a href="/admin/pagechanges/index/{{_id}}" class="btn btn-success btn-xs">View Changes</a>
+  <!--<a href="/admin/sites/delete/{{_id}}" class="btn btn-danger btn-xs">Delete</a>-->
+  </td>
+</tr>
+</template>

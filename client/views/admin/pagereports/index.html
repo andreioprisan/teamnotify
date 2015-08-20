@@ -1,0 +1,15 @@
+<template name="admin_pagereports_page_index">
+
+<div class="cl-mcont">		
+  	<div class="row">
+      	{{#each all_pagereports}}
+      	    {{> UI.dynamic template=admin_pagereports_header data=this_page}}
+	        {{#with this}}
+      	    {{> UI.dynamic template=admin_pagereports_item data=this}}
+      	    {{/with}}
+        {{/each}}
+  	</div>
+
+</div>
+
+</template>

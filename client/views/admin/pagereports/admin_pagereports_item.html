@@ -1,0 +1,24 @@
+<template name="admin_pagereports_item">
+  <a href="#" class="btn btn-primary email-report">Email this report</a>
+  <div class="block block-color info page-changes-report">
+    <div class="header">      
+      <h3>Reported changes on {{date}}</h3>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-lg-4">
+          <p><h4>Before</h4></p>
+          <p>{{{from.text}}}</p>
+        </div>
+        <div class="col-md-12 col-sm-12 col-lg-4">
+          <p><h4>After</h4></p>
+          <p>{{{to.text}}}</p>
+        </div>
+        <div class="col-md-12 col-sm-12 col-lg-4">
+          <p><h4>Changes</h4></p>
+          <p>{{{diff}}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
